@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-kdza6$%!kf!s0(o%5$et92_xtdkw(=*=*3ii2$^@9k1!+o+$=#
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['fusion-lsd.herokuapp.com']
 
 
 # Application definition
