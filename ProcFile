@@ -1,1 +1,1 @@
-web: gunicorn -- pythonpath fusion fusion.wsgi
+web gunicorn -- pythonpath fusion fusion.wsgi
