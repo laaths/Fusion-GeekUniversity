@@ -15,6 +15,8 @@ import os
 import dj_database_url
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
+from django.conf.global_settings import DATABASES
+
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
@@ -87,21 +89,9 @@ DATABASES = {
         'PORT': '5432',
     }
 }
-
-DATABASES = {
-    'default': dj_database_url.config()
-}
 """
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'dasq6fqdqeani6',
-        'USER': 'erzsjyrxplxlvo',
-        'PASSWORD': '7f5e5bab31d130ad180954127d37af32c99959f23d01d4b12068b629704a2193',
-        'HOST': 'ec2-54-161-255-125.compute-1.amazonaws.com',
-        'PORT': '5432',
-    }
-}
+DATABASES['default'] = dj_database_url.config(conn_max_age=600, ssl_require=True)
+
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
